@@ -17,11 +17,11 @@ public class Main {
 		m = Integer.parseInt(st.nextToken());
 		
 		arr = new int[m];
-		flag = new boolean[n+1]; // 0ºÎÅÍ ½ÃÀÛÇØ¼­ +1
+		flag = new boolean[n+1]; // 0ë¶€í„° ì‹œìž‘í•´ì„œ +1
 		sb = new StringBuilder();
 		
 		dfs(1, 0);
-		System.out.println(sb.toString());
+		System.out.println(sb);
 	}
 	
 	public static void dfs(int ss,int depth) {
@@ -35,7 +35,7 @@ public class Main {
 		
 		for(int i=ss; i<=n;i++) {
 			if(!flag[i]) {
-				arr[depth] = i; // i°¡ »ç¿ë¾ÈµÌÀ¸¸é »ç¿ë
+				arr[depth] = i; // iê°€ ì‚¬ìš©ì•ˆë«ìœ¼ë©´ ì‚¬ìš©
 				dfs(i, depth+1);
 			
 			}
